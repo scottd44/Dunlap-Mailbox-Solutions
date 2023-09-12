@@ -1,0 +1,1 @@
+web: gunicorn atlwildin.wsgi --log-file -
