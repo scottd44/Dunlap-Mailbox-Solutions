@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tagger Data</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="container mt-5 px-2">
+    <div class="mb-2 d-flex justify-content-between align-items-center">
+        <div class="position-relative"> <span class="position-absolute search"></span> <input id="myInput" onkeyup="myFunction()" class="form-control w-100" placeholder="Search by Name..."> </div>
+        <div class="px-2"> <span>Filters <i class="fa fa-angle-down"></i></span> <i class="fa fa-ellipsis-h ms-3"></i> </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-responsive table-borderless" id="myTable">
+            <thead>
+                <tr class="bg-light">
+                    <th scope="col" width="5%"><input class="form-check-input" type="checkbox"></th>
+                    <th scope="col" width="25%">Date Last Active</th>
+                    <th scope="col" width="25%">Target Status</th>
+                    <th scope="col" width="35%">Tagger Name</th>
+                    <th class="text-end" scope="col" width="10%">Images Tagged</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                    <td>1 Oct, 21</td>
+                    <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Completed</span></td>
+                    <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"> Rushabh Varia</td>
+                    <td class="text-end"><span class="fw-bolder">45</span> <i class="fa fa-ellipsis-h ms-2"></i></td>
+                </tr>
+                <tr>
+                    <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                    <td>12 Oct, 21</td>
+                    <td><i class="fa fa-dot-circle-o text-danger"></i><span class="ms-1">Incomplete</span></td>
+                    <td><img src="https://i.imgur.com/nmnmfGv.png" width="25"> Andrew Ramsager</td>
+                    <td class="text-end"><span class="fw-bolder">32</span> <i class="fa fa-ellipsis-h ms-2"></i></td>
+                </tr>
+                <tr>
+                    <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                    <td>1 Nov, 21</td>
+                    <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Completed</span></td>
+                    <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"> Akshay Pramod</td>
+                    <td class="text-end"><span class="fw-bolder">76</span> <i class="fa fa-ellipsis-h ms-2"></i></td>
+                </tr>
+                <tr>
+                    <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                    <td>19 Oct, 21</td>
+                    <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Completed</span></td>
+                    <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"> Andrew Bauer</td>
+                    <td class="text-end"><span class="fw-bolder">103</span> <i class="fa fa-ellipsis-h ms-2"></i></td>
+                </tr>
+                <tr>
+                    <th scope="row"><input class="form-check-input" type="checkbox"></th>
+                    <td>1 Oct, 21</td>
+                    <td><i class="fa fa-check-circle-o green"></i><span class="ms-1">Completed</span></td>
+                    <td><img src="https://i.imgur.com/nmnmfGv.png" width="25"> Andrew Downhower</td>
+                    <td class="text-end"><span class="fw-bolder">64</span> <i class="fa fa-ellipsis-h ms-2"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[2];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+</body>
+</html>
