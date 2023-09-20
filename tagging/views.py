@@ -245,11 +245,10 @@ def quiz(request):
     isAdvanced = 1
     # Get list of animals
 
-    animal_info_df = pd.read_sql("SELECT Animal_Common_Names, Animal_Scientific_Name FROM Animal", con=cnxn)
+    
 
 
-    return render(request, "tagging/quiz.html", {
-        "animal_info_df": animal_info_df})
+    return render(request, "tagging/quiz.html")
 
 
 ## Utility Functions
