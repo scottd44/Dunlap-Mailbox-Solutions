@@ -1,9 +1,10 @@
 Django==3.2.5
-pyrebase==3.0.27  # Specify a version to ensure compatibility
+pyrebase
 mysqlclient==2.0.3
+pymysql
 pytz
 pandas==1.3.3
 gunicorn==20.0.4
 whitenoise==5.2.0
 psycopg2-binary==2.8.6
-boto3==1.18.67  # Specify a version for AWS SDK compatibility
+boto3
