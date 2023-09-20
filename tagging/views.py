@@ -32,6 +32,7 @@ def home(request):
 
 
 def postsignIn(request):
+
         #return render(request, "tagging/homepage.html", {"email": email})
         return user_dashboard(request)
 
@@ -237,56 +238,8 @@ def wildlife_data(request):
 
 def quiz(request):
 
-    try:
-        user_uid = request.session['uid']
-    except:
-        return signIn(request)
-
-    user_uid = request.session['uid']
-    cnxn, cursor = mysqlconnect()
-
-    cursor.execute(f'SELECT Tagger_Name, Level from `wildlife-tagging`.Tagger where UUID="{user_uid}"')
-
-    result = cursor.fetchall()[0]
-    user_name, user_level = result[0].replace(u'\xa0', ' '), result[1].replace(u'\xa0', ' ')
-    totalQuestions = 10
-    numCorrect = 0
-
-    animal_type1 = "NULL"
-    tagged_img_id1 = "NULL"
-
-    animal_type2 = "NULL"
-    tagged_img_id2 = "NULL"
-
-    animal_type3 = "NULL"
-    tagged_img_id3 = "NULL"
-
-    animal_type4 = "NULL"
-    tagged_img_id4 = "NULL"
-
-    animal_type5 = "NULL"
-    tagged_img_id5 = "NULL"
-
-    animal_type6 = "NULL"
-    tagged_img_id6 = "NULL"
-
-    animal_type7 = "NULL"
-    tagged_img_id7 = "NULL"
-
-    animal_type8 = "NULL"
-    tagged_img_id8 = "NULL"
-
-    animal_type9 = "NULL"
-    tagged_img_id9 = "NULL"
-
-    animal_type10 = "NULL"
-    tagged_img_id10 = "NULL"
-
-    if request.POST:
-        numCorrect = get_quiz_score(request, cnxn, cursor)
 
     # Get user stats
-    user_stats = get_current_user_statistics(user_uid)
 
     # Set questions based on levels
     isAdvanced = 1
@@ -296,7 +249,6 @@ def quiz(request):
 
 
     return render(request, "tagging/quiz.html", {
-        "user_name": user_name,
         "animal_info_df": animal_info_df})
 
 
