@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-+l#=8ej6cm8xc(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['wildlife-tagger.herokuapp.com', '127.0.0.1','dunlapmailboxsolutions-8940c507dbca.herokuapp.com']
+ALLOWED_HOSTS = ['wildlife-tagger.herokuapp.com', '127.0.0.1','dunlapmailboxsolutions-8940c507dbca.herokuapp.com','0.0.0.0']
 
 
 
