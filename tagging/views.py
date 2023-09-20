@@ -13,14 +13,14 @@ import pytz
 
 ## File Imports
 from atlwildin import settings
-from tagging.pyscripts.firebaseConfig import get_firebase_configuration
+
 from tagging.pyscripts.userTagging import *
 from tagging.pyscripts.userLevelUpgrade import *
 
 
 
 # Initialising database,auth and firebase for further use
-config, firebase, authe, database = get_firebase_configuration()
+
 
 
 def signIn(request):
@@ -32,61 +32,6 @@ def home(request):
 
 
 def postsignIn(request):
-    if "SignUp_Researcher" in request.POST or "SignUp_Tagger" in request.POST:
-        email = request.POST.get('email_signup')
-        passs = request.POST.get('pass_signup')
-        name = request.POST.get('name_signup')
-        org = request.POST.get('organization_signup')
-        try:
-            # creating a user with the given email and password
-            user = authe.create_user_with_email_and_password(email, passs)
-            print(f"User: {user.get('localId')}")
-            print(f"Request Session: {request.session.get(user.get('localId'))}")
-            uid = user.get('localId')
-
-            idtoken = request.session.get(user.get('localId'))
-            print(uid, idtoken)
-
-            cnxn, cursor = mysqlconnect()
-
-            if "SignUp_Researcher" in request.POST:
-                table_name = "Researcher"
-                cursor.execute(f"""
-                            INSERT INTO {table_name}
-                            VALUES ('{uid}', '{name}', '{email}', '{org}')
-                            """)
-
-            else:
-                table_name = "Tagger"
-                cursor.execute(f"""
-                            INSERT INTO {table_name}
-                            VALUES ('{uid}', '{name}', '{email}', '{org}', 'Beginner', NULL)
-                            """)
-            cnxn.commit()
-        except Exception as e:
-            print("ERROR")
-            print(e)
-            return render(request, "tagging/login.html", {"message": "User already exists!"})
-
-        return render(request, "tagging/login.html")
-
-    else:
-        email = request.POST.get('email')
-        pasw = request.POST.get('pass')
-        print(email, pasw)
-        try:
-            # if there is no error then signin the user with given email and password
-            user = authe.sign_in_with_email_and_password(email, pasw)
-            print("SUCCESS")
-        except:
-            message = "Invalid Credentials! Please Check your Email/Password"
-            return render(request, "tagging/login.html", {"message": message})
-
-        session_id = user['idToken']
-        request.session['session_id'] = str(session_id)
-        request.session['uid'] = user.get('localId')
-
-
         #return render(request, "tagging/homepage.html", {"email": email})
         return user_dashboard(request)
 
