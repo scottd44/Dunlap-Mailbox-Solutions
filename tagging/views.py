@@ -24,7 +24,7 @@ config, firebase, authe, database = get_firebase_configuration()
 
 
 def signIn(request):
-    return render(request, "tagging/login.html")
+    return render(request, "tagging/dashboard.html")
 
 
 def home(request):
@@ -352,8 +352,6 @@ def quiz(request):
 
     return render(request, "tagging/quiz.html", {
         "user_name": user_name,
-        "user_stats": user_stats,
-        "isAdvanced": isAdvanced,
         "animal_info_df": animal_info_df})
 
 

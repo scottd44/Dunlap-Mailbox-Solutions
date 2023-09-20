@@ -23,7 +23,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
   <link rel="icon" type="image/png" href="{% static 'assets/img/favicon.png' %}">
   <title>
-    ATL Wildin'
+    Dunlap Mailbox Solutions
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -42,8 +42,8 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href="/">
-        <img src="{% static 'assets/img/logo-ct.png' %}" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold">ATL Wildin'</span>
+        <img src="{% static 'assets/img/box.png' %}" class="navbar-brand-img h-100" alt="main_logo">
+        <span class="ms-1 font-weight-bold">Dunlap Mailbox Solutions</span>
       </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -86,7 +86,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Tagging</span>
+            <span class="nav-link-text ms-1">Reviews</span>
           </a>
         </li>
         <li class="nav-item">
@@ -106,14 +106,14 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Leaderboards</span>
+            <span class="nav-link-text ms-1">Contact Info</span>
           </a>
         </li>
         <li class="nav-item mt-3">
           <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
         </li>
         <li class="nav-item">
-          <a class="nav-link active " href="/profile">
+          <a class="nav-link active " href="/quiz">
             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <title>customer-support</title>
@@ -130,7 +130,7 @@
                 </g>
               </svg>
             </div>
-            <span class="nav-link-text ms-1">Profile</span>
+            <span class="nav-link-text ms-1">See Previous Work!</span>
           </a>
         </li>
         <li class="nav-item">
@@ -163,9 +163,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Quiz</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Previous Work</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Quiz</h6>
+          <h6 class="font-weight-bolder mb-0">Previous Work</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -187,464 +187,26 @@
         <div class="card h-100 p-3">
           <!-- Animal Image -->
           <div align="center">
-            <img src="{% static '/testfiles/racoon.jpg' %}" width="60%">
+            <img src="/static/assets/img/curved-images/Mailbox1.jpg" width="60%">
           </div>
           <form name="beginner_form" method="post" autocomplete="off" action="/quiz/">
             {% csrf_token %}
             <!-- User Form -->
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName1" id="animalCommonName1" list="commonNameList" class="form-control">
-              <datalist id="commonNameList">
-                  {% for _, data in animal_info_df.iterrows %}
-                  <option value="{{data.Animal_Scientific_Name}}">{{data.Animal_Common_Names}}</option>
-                  {% endfor %}
-              </datalist>
-            </div>
-            <br>
-            <input type="text" name="img_id" value="{{tag_image_id}}" hidden>
-          </div>
+          
           <!-- cardinal Start -->
           <div align="center">
-            <img src="{% static '/testfiles/cardinal.jpg' %}" width="60%">
-          </div>
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName2" id="animalCommonName2" list="commonNameList" class="form-control">
-              <datalist id="commonNameList">
-                  {% for _, data in animal_info_df.iterrows %}
-                  <option value="{{data.Animal_Scientific_Name}}">{{data.Animal_Common_Names}}</option>
-                  {% endfor %}
-              </datalist>
-            </div>
-            <br>
-            <input type="text" name="img_id" value="{{tag_image_id}}" hidden>
+            <img src="/static/assets/img/curved-images/Mailbox2.jpg" width="60%">
           </div>
           <!-- fox Start -->
           <div align="center" style="margin: 1%;">
-            <img src="{% static '/testfiles/fox.jpg' %}" width="60%">
-          </div>
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName3" id="animalCommonName3" list="commonNameList" class="form-control">
-              <datalist id="commonNameList">
-                  {% for _, data in animal_info_df.iterrows %}
-                  <option value="{{data.Animal_Scientific_Name}}">{{data.Animal_Common_Names}}</option>
-                  {% endfor %}
-              </datalist>
-            </div>
-            <br>
+            <img src="/static/assets/img/curved-images/Mailbox3.jpg" width="60%">
           </div>
           <!-- Chipmunk Start -->
           <div align="center">
             <img src="{% static '/testfiles/chipmunk.jpg' %}" width="60%">
           </div>
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName4" id="animalCommonName4" list="commonNameList" class="form-control">
-              <datalist id="commonNameList">
-                  {% for _, data in animal_info_df.iterrows %}
-                  <option value="{{data.Animal_Scientific_Name}}">{{data.Animal_Common_Names}}</option>
-                  {% endfor %}
-              </datalist>
-            </div>
-            <br>
-          </div>
-          <!-- Squirrel Start -->
-          <div align="center">
-            <img src="{% static '/testfiles/squirrel.jpg' %}" width="60%">
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName5" id="animalCommonName5" list="commonNameList" class="form-control">
-              <datalist id="commonNameList">
-                  {% for _, data in animal_info_df.iterrows %}
-                  <option value="{{data.Animal_Scientific_Name}}">{{data.Animal_Common_Names}}</option>
-                  {% endfor %}
-              </datalist>
-            </div>
-            <br>
-          </div>
-          <!-- Cat Start -->
-          <div align="center" style="margin: 1%;">
-            <img src="{% static '/testfiles/cat.jpg' %}" width="60%">
-          </div>
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName6" id="animalCommonName6" list="commonNameList" class="form-control">
-              <datalist id="commonNameList">
-                  {% for _, data in animal_info_df.iterrows %}
-                  <option value="{{data.Animal_Scientific_Name}}">{{data.Animal_Common_Names}}</option>
-                  {% endfor %}
-              </datalist>
-            </div>
-            <br>
-          </div>
-          <!-- Fox1 start -->
-          <div align="center" style="margin: 1%;">
-            <img src="{% static '/testfiles/fox1.jpg' %}" width="60%">
-          </div>
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName7" id="animalCommonName7" list="commonNameList" class="form-control">
-              <datalist id="commonNameList">
-                  {% for _, data in animal_info_df.iterrows %}
-                  <option value="{{data.Animal_Scientific_Name}}">{{data.Animal_Common_Names}}</option>
-                  {% endfor %}
-              </datalist>
-            </div>
-            <br>
-          </div>
-          <!-- cedar Waxing start -->
-          <div align="center" style="margin: 1%;">
-            <img src="{% static '/testfiles/cedarWaxwing.jpg' %}" width="60%">
-          </div>
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName8" id="animalCommonName8" list="commonNameList" class="form-control">
-            </div>
-            <br>
-          </div>
-          <!-- Mouse Start -->
-          <div align="center" style="margin: 1%;">
-            <img src="{% static '/testfiles/mouse.jpg' %}" width="60%">
-          </div>
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName9" id="animalCommonName9" list="commonNameList" class="form-control">
-              
-            </div>
-            <br>
-          </div>
-          <!-- Opossum Start -->
           <div align="center" style="margin: 1%;">
             <img src="{% static '/testfiles/opossum.jpg' %}" width="60%">
-          </div>
-          <div class="animal-form" style="margin-top: 5%;margin-left: 10%;margin-right: 10%;margin-bottom: 0%;">
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio1" value="Mammal">
-              <label class="form-check-label" name="mammal_exisits" for="inlineRadio2">Mammal</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio2" value="Bird">
-              <label class="form-check-label" name="bird_exisits" for="inlineRadio2">Bird</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio3" value="Reptile">
-              <label class="form-check-label" name="reptile_exisits" for="inlineRadio2">Reptile</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio4" value="Insect">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Insect</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio5" value="Amphibian">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Amphibian</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio6" value="Invertebrate">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Invertebrate</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio7" value="Slug/Snail">
-              <label class="form-check-label" name="insect_exisits" for="inlineRadio2">Slug/Snail</label>
-            </div>
-            
-            <br>
-            <div class="input-group col-md-3">
-              <span class="input-group-text">Animal</span>
-              <input type="text" name="animalCommonName10" id="animalCommonName10" list="commonNameList" class="form-control">
-              
-            </div>
-            <br>
           </div>
           
           
@@ -669,7 +231,7 @@
                   document.write(new Date().getFullYear())
                 </script>,
                 by
-                <a href="" class="font-weight-bold" target="_blank">ATL Wildin'</a>
+                <a href="" class="font-weight-bold" target="_blank">Scott Dunlap</a>
               </div>
             </div>
           </div>
