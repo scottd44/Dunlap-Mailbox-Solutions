@@ -132,28 +132,7 @@ def user_tagging(request):
                                                     "animal_info_df": animal_info_df})
 
 def user_leaderboards(request):
-    try:
-        user_uid = request.session['uid']
-    except:
-        return signIn(request)
-
-    user_uid = request.session['uid']
-
-    cnxn, cursor = mysqlconnect()
-
-    cursor.execute(f'SELECT Tagger_Name, Level from `wildlife-tagging`.Tagger where UUID="{user_uid}"')
-
-    result = cursor.fetchall()[0]
-    user_name, user_level = result[0].replace(u'\xa0', ' '), result[1].replace(u'\xa0', ' ')
-
-    # Get leaderboard
-    lb_df = generate_leaderboard(user_uid)
-    # Get user stats
-    user_stats = get_current_user_statistics(user_uid)
-
-    return render(request, "tagging/leaderboard.html", {"lb_df": lb_df,
-                                                        "user_name": user_name,
-                                                        "user_stats": user_stats})
+    return render(request, "tagging/leaderboard.html")
 
 
 def user_list(request):
