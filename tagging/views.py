@@ -170,28 +170,8 @@ def user_list(request):
                                                         "total_tagged": total_tagged})
 
 def user_profile(request):
-    try:
-        user_uid = request.session['uid']
-    except:
-        return signIn(request)
-
-    user_uid = request.session['uid']
-
-    cnxn, cursor = mysqlconnect()
-
-    cursor.execute(f'SELECT Tagger_Name, Level, Organization, Email_Address from `wildlife-tagging`.Tagger where UUID="{user_uid}"')
-
-    result = cursor.fetchall()[0]
-    user_name, user_level, user_organization, user_email = result[0].replace(u'\xa0', ' '), result[1].replace(u'\xa0', ' '), result[2].replace(u'\xa0', ' '), result[3].replace(u'\xa0', ' ')
-
-    # Get user stats
-    user_stats = get_current_user_statistics(user_uid)
-
-    return render(request, "tagging/profile.html", {"user_name": user_name,
-                                                    "user_level": user_level,
-                                                    "user_organization": user_organization,
-                                                    "user_email": user_email,
-                                                    "user_stats": user_stats})
+    
+    return render(request, "tagging/profile.html")
 
 def wildlife_data(request):
     try:
